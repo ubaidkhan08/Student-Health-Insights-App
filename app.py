@@ -39,7 +39,7 @@ def beautify(data):
 def generate_insights():
     prompt = "I want you to take the following inputs: 'Name', 'Student ID', 'Gender', 'Age', 'Height (cm)', 'Weight (kg)', 'Bone Mass (kg)', 'Fat Percentage (%)', 'Protein Amount (kg)', 'Moisture (%)'. And generate the below insights for this person (Use predictive analysis): BMI, BMR, Bone Mass, Fat Percentage, Viscral Fat Index, Muscle Mass, Protein Amount, Moisture, Weight Control, Obesity Rating. Return them in a python-dictionary format. Use the exact same words as I have used above as keys, and put YOUR output as their respective values. Sample output: Output: {'BMI': 26.1, 'BMR': 1859.5, 'Bone Mass': 3, 'Fat Percentage': '20%', 'Viscral Fat Index': 'Healthy', 'Muscle Mass': 52, 'Protein Amount': 10, 'Moisture': '60%', 'Weight Control': 'Healthy', 'Obesity Rating': 'Healthy'}. RETURN NOTHING ELSE BUT THE ABOVE OUTPUT! Real Input: Name = Aman Mishra, Student ID = 999, Gender = Male, Age = 16, Height (cm) = 170, Weight (kg) = 65, Bone Mass (kg) = 2.5, Fat Percentage (%) = 15, Protein Amount (kg) = 4.5, Moisture (%) = 35. RETURN NOTHING ELSE BUT INSIGHTS ON THE ABOVE OUTPUT!"
     
-    client = OpenAI(api_key='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')
+    client = OpenAI(api_key=OPENAI_API_KEY)
 
     response = client.completions.create(
       model="gpt-3.5-turbo-instruct",
