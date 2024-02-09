@@ -5,9 +5,6 @@ import csv
 import ast
 from openai import OpenAI
 
-# Load environment variables from .env file
-load_dotenv()
-
 # Access the environment variable
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
